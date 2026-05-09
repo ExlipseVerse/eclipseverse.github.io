@@ -395,6 +395,12 @@ function makeVideosResponsive() {
     });
 }
 
+fetch("https://countapi.mileshilliard.com/api/v1/hit/eclipseportfolio/views")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("view-count").innerText = data.value;
+    });
+
 // Initialize responsive videos
 makeVideosResponsive();
 
