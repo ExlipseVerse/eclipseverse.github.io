@@ -37,7 +37,7 @@ function initScrollAnimations() {
 
 
 function initNavigation() {
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelectorAll('.floating-nav-links a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -278,12 +278,6 @@ window.addEventListener('load', animateCounters);
       behavior: "smooth"
     });
   }
-   document.getElementById("contactBtn").addEventListener("click", function() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
-  });
 // ============================================
 // KEYBOARD SHORTCUTS
 // ============================================
@@ -395,11 +389,29 @@ function makeVideosResponsive() {
     });
 }
 
-fetch("https://countapi.mileshilliard.com/api/v1/hit/eclipseportfolio/views")
+function updateIndiaTime() {
+    const formatter = new Intl.DateTimeFormat('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    });
+
+    const time = formatter.format(new Date());
+
+    document.getElementById('india-time').textContent = time;
+}
+
+updateIndiaTime();
+setInterval(updateIndiaTime, 1000);
+
+fetch("https://api.counterapi.dev/v2/exlipseverses-team-4038/first-counter-4038/up")
     .then(res => res.json())
     .then(data => {
-        document.getElementById("view-count").innerText = data.value;
+        console.log(data);
+        document.getElementById("view-count").innerText = data.data.up_count;
     });
+
 
 // Initialize responsive videos
 makeVideosResponsive();

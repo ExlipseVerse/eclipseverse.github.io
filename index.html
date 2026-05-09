@@ -8,20 +8,14 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">Eclipse</span>
-                <span class="logo-sub">Verse</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <nav class="floating-navbar">
+        <ul class="floating-nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -41,12 +35,28 @@
             </div>
             
             <h1 class="hero-title">
-                <span class="title-word">Roblox</span>
-                <span class="title-word">Scripter</span>
+                <span class="title-word">Eclipse</span>
+                <span class="title-word">Verse</span>
             </h1>
+
+            <h2 class="hero-sub">
+                <span class="sub-word">Roblox</span>
+                <span class="sub-word">Scripter</span>
+            </h2>
+
+            <div class="timezone-card">
+                <span class="timezone-dot"></span>
+
+                <div class="timezone-info">
+                    <span class="timezone-label">LOCAL TIME</span>
+                    <span class="timezone-time" id="india-time">Loading...</span>
+                </div>
+
+                <span class="timezone-region">GMT +5:30</span>
+            </div>
             
             <p class="hero-subtitle">
-                I’m a 16-year-old Roblox developer from India (GMT +5:30) with over 2 years of scripting experience. I specialize in creating advanced AI systems, optimized gameplay frameworks, and immersive mechanics for Roblox games.
+                I’m a 16-year-old Roblox developer from India with over 2 years of scripting experience. I specialize in creating advanced AI systems, optimized gameplay frameworks, and immersive mechanics for Roblox games.
             </p>
             
             <div class="hero-buttons">
