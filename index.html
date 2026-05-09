@@ -11,8 +11,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-text">Edit</span><!--edit PUT ur company name here or something else its in left top corner-->
-                <span class="logo-sub">this</span>
+                <span class="logo-text">Eclipse</span>
+                <span class="logo-sub">Verse</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
@@ -30,14 +30,19 @@
             <div class="hero-avatar-container">
                 <div class="avatar-glow"></div>
                 <div class="avatar">
-                    <div class="avatar-inner">✨</div><!--edit put ur pfp in replace of this classs-->
+                    <div class="avatar-inner">
+                        <img 
+                            src="https://cdn.discordapp.com/avatars/1326971677690826782/56995e51cfa8571792281fdf37cf61a1.png?size=256"
+                            alt="My Discord Avatar"
+                        />
+                    </div>
                 </div>
                 <span class="status-badge">Available for Work</span>
             </div>
             
             <h1 class="hero-title">
-                <span class="title-word">ECLIPSE</span>
-                <span class="title-word">VERSE</span>
+                <span class="title-word">Roblox</span>
+                <span class="title-word">Scripter</span>
             </h1>
             
             <p class="hero-subtitle">
@@ -46,12 +51,12 @@
             
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">
-  <span class="btn-text">View My Work</span>
-  <span class="btn-glow"></span>
-</button>
+                    <span class="btn-text">View My Work</span>
+                    <span class="btn-glow"></span>
+                </button>
                 <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-  <span class="btn-text">Get In Touch</span>
-</button>
+                    <span class="btn-text">Get In Touch</span>
+                </button>
             </div>
         </div>
 
@@ -68,116 +73,83 @@
         
         <div class="services-grid">
             <div class="service-card" data-scroll>
-                <div class="service-icon">🎨</div>
-                <h3>Creative Design</h3>
-                <p>Stunning visual designs that capture your brand essence</p>
-            </div>
-            
-            <div class="service-card" data-scroll>
-                <div class="service-icon">🎬</div>
+                <div class="service-icon">
+                    <img width="64" height="64" src="https://img.icons8.com/nolan/64/settings--v1.png" alt="settings--v1"/>
+                </div>
                 <h3>Roblox Scripting</h3>
-                <p>Professional production with cinematic graphics</p>
+                <p>My main strength — AI systems, game mechanics, data stores, and optimized frameworks built in Lua</p>
             </div>
-            
+
             <div class="service-card" data-scroll>
-                <div class="service-icon">✨</div>
-                <h3>Motion Graphics</h3>
-                <p>Eye-catching animations and motion design</p>
+                <div class="service-icon">
+                    <img width="48" height="48" src="https://img.icons8.com/glassmorphism/48/controller.png" alt="controller"/>
+                </div>
+                <h3>Full Game Development</h3>
+                <p>I've built a complete Roblox game from scratch — scripting, systems, and UI all handled end to end</p>
             </div>
-            
+
             <div class="service-card" data-scroll>
-                <div class="service-icon">🎯</div>
-                <h3>Branding</h3>
-                <p>Complete brand identity and visual storytelling</p>
+                <div class="service-icon">
+                    <img width="64" height="64" src="https://img.icons8.com/nolan/64/web.png" alt="web"/>
+                </div>
+                <h3>Roblox UI</h3>
+                <p>Functional in-game interfaces and menus using ScreenGui — nothing too fancy but gets the job done</p>
+            </div>
+
+            <div class="service-card" data-scroll>
+                <div class="service-icon">
+                    <img width="64" height="64" src="https://img.icons8.com/nolan/64/code--v2.png" alt="code--v2"/>
+                </div>
+                <h3>Web Development</h3>
+                <p>Frontend websites with HTML, CSS and JavaScript — also learning backend to round out my skills</p>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
     <section class="pricing-section" id="pricing">
-        <h2 class="section-title">Pricing Plans</h2>
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-subtitle">Transparent, fair pricing based on project complexity</p>
+        
         <div class="pricing-grid">
-            <!-- Starter Plan -->
             <div class="pricing-card" data-scroll>
-                <div class="plan-header">
-                    <h3>Basic Script</h3>
-                    <p class="plan-desc">Perfect for starters</p>
-                </div>
-                
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">50</span>
-                    <span class="period">/script</span>
-                </div>
-
-                <ul class="features-list">
-                    <li>✓ Simple gameplay mechanics</li>
-                    <li>✓ Basic UI interactions</li>
-                    <li>✓ Bug fixes & optimization</li>
-                    <li>✓ 3-5 day delivery</li>
-                    <li>✓ Email support</li>
-                    <li class="unavailable">✗ Fast Support</li>
-                    <li class="unavailable">✗ Add some options</li>
-                    <li class="unavailable">✗ Premium Support</li>
-                </ul>
-
-               <button class="btn btn-secondary" onclick="scrollToBottom()">Get Started</button>
+                <h3>Light Work</h3>
+                <div class="price"><span class="amount">$5-25</span></div>
+                <p>Perfect for GUI animations, simple scripts, and minor system modifications</p>
             </div>
-
-            <!-- Professional Plan (Featured) -->
             <div class="pricing-card featured" data-scroll>
-                <div class="badge-popular">Most Popular</div>
-                
-                <div class="plan-header">
-                    <h3>Advanced System</h3>
-                    <p class="plan-desc">For serious creators</p>
-                </div>
-                
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">200</span>
-                    <span class="period">/system</span>
-                </div>
-
-                <ul class="features-list">
-                    <li>✓ Unlimited projects</li>
-                    <li>✓ Advanced video editing</li>
-                    <li>✓ 4K delivery</li>
-                    <li>✓ 5 revisions included</li>
-                    <li>✓ Motion graphics</li>
-                    <li>✓ Basic VFX</li>
-                    <li>✓ Color grading</li>
-                    <li>✓ Phone & email support</li>
-                </ul>
-
-                <button class="btn btn-secondary" onclick="scrollToBottom()">Get Started</button>
+                <h3>Medium Work</h3>
+                <div class="price"><span class="amount">$25-50</span></div>
+                <p>Ideal for leveling systems, data stores, and moderate complexity features</p>
             </div>
-
-            <!-- Enterprise Plan -->
             <div class="pricing-card" data-scroll>
-                <div class="plan-header">
-                    <h3>Enterprise</h3>
-                    <p class="plan-desc">Full creative power</p>
-                </div>
-                
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">1999</span>
-                    <span class="period">/month</span>
-                </div>
+                <h3>Heavy Work</h3>
+                <div class="price"><span class="amount">$50-100</span></div>
+                <p>Complex abilities, power systems, and comprehensive game mechanics</p>
+            </div>
+        </div>
 
-                <ul class="features-list">
-                    <li>✓ Unlimited everything</li>
-                    <li>✓ Expert video editing</li>
-                    <li>✓ 8K delivery</li>
-                    <li>✓ Unlimited revisions</li>
-                    <li>✓ Advanced motion graphics</li>
-                    <li>✓ Professional VFX</li>
-                    <li>✓ Full color grading</li>
-                    <li>✓ 24/7 priority support</li>
-                </ul>
-
-                <button class="btn btn-secondary" onclick="scrollToBottom()">Get Started</button>
+        <!-- Payment Methods INSIDE the section -->
+        <div class="payment-methods">
+            <p class="payment-title">Accepted Payment Methods</p>
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <span class="payment-icon" style="font-size: 36px;">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/robux--v1.png" alt="robux--v1"/>
+                    </span>
+                    <!-- <span class="payment-name">Robux</span> -->
+                    <span class="payment-note">Roblox currency accepted</span>
+                </div>
+                <div class="payment-card">
+                    <span class="payment-icon" style="font-size: 28px; font-weight: 900; background: linear-gradient(135deg, #097939, #ed752e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px;">UPI</span>
+                    <!-- <span class="payment-name">UPI</span> -->
+                    <span class="payment-note">GPay, PhonePe, Paytm</span>
+                </div>
+                <div class="payment-card">
+                    <span class="payment-icon" style="font-size: 22px; font-weight: 900; letter-spacing: -1px;"><span style="color: #009cde;">Pay</span><span style="color: #003087;">Pal</span></span>
+                    <!-- <span class="payment-name">PayPal</span> -->
+                    <span class="payment-note">International payments</span>
+                </div>
             </div>
         </div>
     </section>
@@ -238,23 +210,19 @@
     
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
-        <h2>Got feedback or want to collaborate?</h2>
-        <p>We’d love to hear from you — whether it’s project ideas, feedback, or collaboration offers.</p>
+        <h2>Let's build something cool</h2>
+        <p>Have a project idea or just want to chat? Hit me up anytime.</p>
         <div class="button-group">
-            <a href="mailto:eclipseversetest2244@gmail.com" class="btn btn-primary btn-large">Send Email</a>
-            <a href="https://discord.com/login" class="btn btn-primary btn-large">Discord: EclipseVerse</a>
+            <a href="mailto:eclipsedev248@gmail.com" class="btn btn-primary btn-large">Send Email</a>
+            <a href="https://discord.com/users/1326971677690826782" class="btn btn-primary btn-large">Message on Discord</a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2026 EclipseVerse Studio. All rights reserved.</p>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
 </body>
 </html>
-< ! - -   r e d e p l o y   - - >  
- 

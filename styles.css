@@ -285,7 +285,15 @@ html {
 }
 
 .avatar-inner {
-    animation: spin 4s linear infinite;
+    animation: none;
+}
+
+.avatar-inner img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;       /* makes it a circle */
+    object-fit: cover;
+    display: block;
 }
 
 .status-badge {
@@ -915,53 +923,141 @@ html {
     color: white;
 }
 
-/* ============================================
-   PRICING SECTION
-   ============================================ */
-
 .pricing-section {
-    padding: 100px 40px;
+    padding: 120px 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    align-items: center;
-}
-
 .pricing-card {
-    background: rgba(139, 92, 246, 0.08);
-    border: 2px solid rgba(139, 92, 246, 0.2);
+    background: rgba(20, 20, 45, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.15);
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 50px 40px;   /* this ensures top breathing room */
     text-align: center;
-    transform: translateY(30px);
-    opacity: 0;
     transition: all 0.3s ease;
-    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .pricing-card[data-scroll] {
     animation: slideInUp 0.8s ease-out forwards;
 }
 
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.pricing-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.pricing-card .price .amount {
+    font-size: 52px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    margin-bottom: 20px;
+}
+
 .pricing-card:hover {
+    background: rgba(139, 92, 246, 0.15);
     border-color: var(--primary-color);
     transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
 }
 
 .pricing-card.featured {
-    transform: scale(1.05) translateY(30px);
+    background: rgba(25, 25, 55, 0.95);
     border-color: var(--primary-color);
-    background: rgba(139, 92, 246, 0.15);
-    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
 }
 
-.pricing-card.featured[data-scroll] {
-    animation: slideInUp 0.8s ease-out forwards, scale 0.8s ease-out forwards;
+.pricing-card.featured:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.5);
+}
+
+/* Payment Methods - redesigned */
+.payment-methods {
+    margin-top: 70px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+    text-align: center;
+}
+
+.payment-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.payment-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 16px;
+    padding: 28px 40px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+.payment-card:hover {
+    border-color: var(--primary-color);
+    background: rgba(139, 92, 246, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.2);
+}
+
+.payment-icon {
+    margin: auto;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.payment-note {
+    margin-top: auto;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: -60px;
+    margin-bottom: 60px;
 }
 
 .badge-popular {
