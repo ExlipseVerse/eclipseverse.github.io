@@ -371,6 +371,39 @@ document.querySelectorAll('.social-btn').forEach(btn => {
     });
 });
 
+// VIDEO MODAL
+
+const modal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modalVideo");
+const closeVideo = document.querySelector(".close-video");
+
+document.querySelectorAll(".project-video").forEach(card => {
+    card.addEventListener("click", () => {
+        const videoSrc = card.querySelector("source").src;
+
+        modal.classList.add("active");
+
+        modalVideo.src = videoSrc;
+        modalVideo.play();
+    });
+});
+
+closeVideo.addEventListener("click", () => {
+    modal.classList.remove("active");
+
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("active");
+
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    }
+});
+
 // ============================================
 // RESPONSIVE VIDEO EMBEDS
 // ============================================
