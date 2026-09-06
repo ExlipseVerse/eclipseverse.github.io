@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="brand"><small>THE</small>PROJECT<span>.</span>ROLLER</div>
+        <div class="counter">ROLLS<b id="counterVal">000</b></div>
+    </div>
+
+    <div class="sentence">
+        <div class="row">
+        <span class="static-word">Build a</span>
+        <div class="slot" id="slotThing">
+            <div class="reel" id="reelThing"><div class="reel-item">???</div></div>
+        </div>
+        </div>
+        <div class="row">
+        <span class="tag">FOR</span>
+        <div class="slot" id="slotFor">
+            <div class="reel" id="reelFor"><div class="reel-item">???</div></div>
+        </div>
+        </div>
+        <div class="row">
+        <span class="tag alt">TWIST</span>
+        <div class="slot" id="slotTwist">
+            <div class="reel" id="reelTwist"><div class="reel-item">???</div></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="action">
+        <button id="rollBtn">ROLL</button>
+        <div class="hint">or press SPACE</div>
+    </div>
+
+    <div class="history">
+        <h2>// PREVIOUS ROLLS</h2>
+        <div id="historyList"></div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
